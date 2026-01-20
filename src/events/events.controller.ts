@@ -11,7 +11,8 @@ export class EventsController {
 //  }
 
   @Get('type/:type')
-  getPokemonsByType(@Param('type') type:string) {
-    return this.eventsService.getPokemonsByType(type)
+  getPokemonReportByType(@Param('type') type: string) {
+    return this.eventsService.buildPokemonTypeReport(type);
   }
 }
+
